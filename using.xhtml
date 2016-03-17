@@ -12,27 +12,28 @@
 			<div class="Container100" >
 				<h:form enctype="multipart/form-data" id="frmGrafics">
 					<div class="Container50">
-	                  		 <h:panelGrid columns="1" cellpadding="5">
-								<p:chart id="lineChart" responsive="true" widgetVar="lineChart"  type="line" rendered="#{instrumentoMedicaoChartController.displayChart == 'display'}" model="#{instrumentoMedicaoChartController.dateModel}" style="width:600px;height:500px"/>
+						 <h:panelGrid columns="1" cellpadding="5">
+							<p:chart id="lineChart" responsive="true" widgetVar="lineChart"  type="line" 
+								model="#{controller.dateModel}" style="width:600px;height:500px"/>
 
-								<script type="text/javascript">
-									function setLegend() {
-									
-										  this.cfg.legend = {
-												  renderer: $.jqplot.EnhancedLegendRendererCustom,
-												  symbolMarkers:true,
-												  showSwatches:true,
-												  placement: 'outsideGrid',
-												  rendererOptions: {
-													numberColumns: 6
-												  },
-												  show: true,
-												  location: "s"
-										};
+							<script type="text/javascript">
+								function setLegend() {
+								
+									this.cfg.legend = {
+										  renderer: $.jqplot.EnhancedLegendRendererCustom,
+										  symbolMarkers:true,
+										  showSwatches:true,
+										  placement: 'outsideGrid',
+										  rendererOptions: {
+											numberColumns: 6
+										  },
+										  show: true,
+										  location: "s"
+									};
 
-									 }
-								</script>
-							 </h:panelGrid>
+								 }
+							</script>
+						 </h:panelGrid>
 						</div>
 				</h:form>
 			</div>
